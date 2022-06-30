@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * Description: main-Prints out astring to stdout.
- * Return:0 if success.
+ * main - Entry Point
+ * Description: A C program that prints a string using puts.
+ * Return:0 - success.
  */
 
 int main(void)
 {
-	put ("\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return(0);
 }
