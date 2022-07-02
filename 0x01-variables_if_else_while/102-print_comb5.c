@@ -1,28 +1,45 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Prints 3 combination of numbers
  *
- * Return: Always 0
+ * Return: Always (Success)
  */
 int main(void)
 {
-	int num1, num2;
-	for (num1 = 0; num1 <= 98; num1++)
-	{
-		for (num2 = num1 + 1; num2 <= 99; num2++)
-	}
-	putchar((num1 / 10) + '0');
-	putchar((num1 % 10) + '0');
-	putchar(' ');
-	putchar((num2 / 10) + '0');
-	putchar((num2 % 10) + '0');
-	if (num1 == 98 && num2 == 99)
-	continue;
-	putchar(',');
-	putchar(' ');
-	}
-        }
-        putchar('\n');
-	return (0);
+	int c, i, k, j;
 
+	for (c = 48; c <= 57; c++)
+	{
+		for (i = 48; i <= 57; i++)
+		{
+			for (k = 48; k <= 57; k++)
+			{
+				for (j = 48; j <= 57; j++)
+				{
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					{
+						putchar(c);
+						putchar(i);
+						putchar(' ');
+						putchar(k);
+					        putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
+					{
+				        break;
+					}
+					else
+				        {
+			                putchar(',');
+					putchar(' ');
+					}
+					}
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
