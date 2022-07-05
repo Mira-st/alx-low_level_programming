@@ -1,1 +1,1 @@
- check the code
+Write a function that prints 10 times the alphabet
