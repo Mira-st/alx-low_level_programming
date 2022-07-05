@@ -1,4 +1,10 @@
+/**
+ * File: 101-natural.c
+ * Auth: Brennan D Baraban
+ */
+
 #include "main.h"
+
 /**
  * main -list all natural numbers below 1024 (excluded)
  *   that are multiples of 3 or 5.
