@@ -1,1 +1,1 @@
-Write a program that prints
+ check the code
