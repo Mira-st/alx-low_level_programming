@@ -2,24 +2,74 @@
 #include <time.h>
 #include <stdio.h>
 
-int largest_number(int a, int b, int c)
+int convert_day(int month, int day)
 {
-	int largest;
+	switch (month)
+	{
+		case 2:
+			day = 31 + day;
+			break;
+		case 3:
+			day = 59 + day;
+			break;
+		case 4:
+			day = 90 + day;
+			break;
 
-	if (a > b && a > c)
-	{
-		largest = a;
+		case 5:
+			day = 120 + day;
+			break;
+		case 6:
+			day = 151 + day;
+			break;
+		case 7:
+			day = 181 + day;
+			break;
+		case 8:
+			day = 212 + day;
+			break;
+		case 9:
+			day = 243 + day;
+			break;
+		case 10:
+			day = 273 + day;
+			break;
+		case 11:
+			day = 304 + day;
+			break;
+		case 12:
+			day = 334 + day;
+			break;
+		default:
+			break;
 	}
-	else if (b > a && b > c)
+	return (day);
+}
+
+void print_remaining_days(int month, int day, int year)
+{
+	if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
 	{
-		largest = b;
+		if (month >= 2 && day >= 60)
+		{
+			day++;
+		}
+
+		printf("Day of the year: %d\n", day);
+		printf("Remaining days: %d\n", 366 - day);
 	}
 	else
 	{
-		largest = c;
+		if (month == 2 && day == 60)
+		{
+			printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+		}
+		else
+		{
+			printf("Day of the year: %d\n", day);
+			printf("Remaining days: %d\n", 365 - day);
+		}
 	}
-
-	return (largest);
 }
 /**
  * main - debugging example
@@ -27,16 +77,14 @@ int largest_number(int a, int b, int c)
  */
 int main(void)
 {
-	int a, b, c;
-	int largest;
+	/**
+	 * 02/29/2000
+	 * 04/01/1997
+	 */
 
-	a = 0;
-        b = 0;
-	c = 0;
+	int day = convert_day(04, 01);
 
-	largest = largest_number(a, b, c);
 
-	printf("%d is the largest number\n", largest);
+	print_remaining_days(4, day, 1997);
 
-	return (0);
 }
