@@ -2,21 +2,24 @@
 #include <time.h>
 #include <stdio.h>
 
-void positive_or_negative(int i)
+int largest_number(int a, int b, int c)
 {
-	int n;
+	int largest;
 
-	srand(time(0));
-	n = i;
-	n = rand() - RAND_MAX / 2;
-
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
+	if (a > b && a > c)
+	{
+		largest = a;
+	}
+	else if (b > a && b > c)
+	{
+		largest = b;
+	}
 	else
-		printf("%d is negative\n", n);
-	return (0);
+	{
+		largest = c;
+	}
+
+	return (largest);
 }
 /**
  * main - debugging example
@@ -24,10 +27,16 @@ void positive_or_negative(int i)
  */
 int main(void)
 {
-	int i;
+	int a, b, c;
+	int largest;
 
-	i = 0;
-	positive_or_negative(i);
+	a = 0;
+        b = 0;
+	c = 0;
+
+	largest = largest_number(a, b, c);
+
+	printf("%d is the largest number\n", largest);
 
 	return (0);
 }
