@@ -40,19 +40,16 @@ char *cap_string(char *str)
 		    || str[a] == '{'
 
 		    || str[a] == '}')
-
-		{
-			a++;
-			if (str[a] >= 'A' && str[a] <= 'Z')
-				a++;
-			else if (str[a] >= 'a' && str[a] <= 'z')
-				str[a] = str[a] - 32;
-			a--;
-		}
-		else if (str[0] >= 'a' && str[0] <= 'z')
-			str[0] = str[0] - 32;
+		    {
+			    a++;
+			    if (str[a] >= 'A' && str[a] <= 'Z')
+				    a++;
+			    else if (str[a] >= 'a' && str[a] <= 'z')
+				    str[a] = str[a] - 32;
+			    a--;
+		    }
+		    else if (str[0] >= 'a' && str[0] <= 'z')
+			    str[0] = str[0] - 32;
 	}
 	return (str);
-
-
 }
