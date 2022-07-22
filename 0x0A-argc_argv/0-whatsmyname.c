@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "mainn.h"
+#include "main.h"
 
 /**
  * main - function to print file name
