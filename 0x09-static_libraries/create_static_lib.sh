@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gcc -c *.c
+gcc -wall -wextra -pedantic -c *.c
 
-ar -rc liball.a -o *.o
+ar rc liball.a *.o
