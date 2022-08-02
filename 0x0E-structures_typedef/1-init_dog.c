@@ -10,10 +10,12 @@
  * @owner: character pointer
  * Return: 0 Always(success)
  */
-void init_dog(struct dog *d, char *name, float age, char *owner);
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	if (d != 0)
 	{
-		d->(name, age, owner) = (name, age, owner);
+		d->name = name;
+		d->age =  age;
+		d->owner = owner;
 	}
 }
