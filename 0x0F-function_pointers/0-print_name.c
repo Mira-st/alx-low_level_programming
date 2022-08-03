@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "function_pointers.h"
 
 /**
@@ -8,10 +10,9 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	void main (char f)
-		char *f;
-	printf("My name is Orire Kemi\n", f);
-	getchar();
+	if (name == NULL || f == NULL);
+	
+	return;
 
-	return (0);
+	f(name);
 }
