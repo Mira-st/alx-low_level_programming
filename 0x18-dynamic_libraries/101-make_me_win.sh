@@ -1,4 +1,4 @@
 #!/bin/bash
 
-wget -P /tmp https://github.com/eyoul/alx-low_level_programming/raw/main/0x18-dynamic_libraries/iwin.so
-export LD_PRELOAD=/tmp/iwin.so
+wget -q -o /tmp/libdyanmic.so https://github.com/Mira-st/alx-low_level_programming/raw/master/0x18-dynamic_libraries/libdynamic.so
+export LD_PRELOAD=/tmp/libdynamic.so
