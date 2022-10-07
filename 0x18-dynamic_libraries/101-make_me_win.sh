@@ -1,4 +1,4 @@
 #!/bin/bash
+wget -q -o /tmp/cheatme.so https://github.com/rolandoquiroz/holbertonschool-low_level_programming/raw/master/0x18-dynamic_libraries/cheatme.so
+export LD_PRELOAD=/tmp/cheatme.so
 
-wget -q -o /tmp/libdyanmic.so https://github.com/Mira-st/alx-low_level_programming/raw/master/0x18-dynamic_libraries/libdynamic.so
-export LD_PRELOAD=/tmp/libdynamic.so
